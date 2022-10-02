@@ -11,14 +11,14 @@ import {
 import { CreateTaskDto } from './dto/get-task.dto';
 import { GetTasksFilterDto } from './dto/get-tasks-filter.dto.filter';
 import { UpdateTaskStatusDto } from './dto/update-task-status.dto';
-import { Task, TaskStatus } from './task.model';
+import { TaskStatus } from './task-status.enum';
 import { TasksService } from './tasks.service';
 
 @Controller('tasks')
 export class TasksController {
   constructor(private tasksService: TasksService) {}
 
-  @Get()
+  /*   @Get()
   getTasks(@Query() filterDto: GetTasksFilterDto): Task[] {
     if (Object.keys(filterDto).length) {
       return this.tasksService.getTasksWithFilter(filterDto);
@@ -49,5 +49,5 @@ export class TasksController {
   ): Task {
     const { status } = updateTaskStatusDto;
     return this.tasksService.updateTask(id, status);
-  }
+  } */
 }
