@@ -1,8 +1,8 @@
 name: NestJS Backend
 
-on: 
+on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   test:
@@ -10,12 +10,11 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
-    
+
     steps:
-      
       - name: Copy repository
         uses: actions/checkout@v2
-      
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -23,9 +22,9 @@ jobs:
 
       - name: Install npm dependencies
         run: npm ci
-      
+
       - name: Lint code
         run: npm run lint
-      
+
       - name: Run tests
         run: npm run test
