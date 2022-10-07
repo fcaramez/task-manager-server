@@ -1,8 +1,9 @@
 name: NestJS Backend
 
 on:
-  pull_request:
-    branches: [main]
+  pull_requests:
+    branches: 
+      - main
 
 jobs:
   pull_request:
