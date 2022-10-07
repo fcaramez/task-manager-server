@@ -1,4 +1,4 @@
-Name: NestJS Backend
+name: NestJS Backend
 
 on:
   push:
