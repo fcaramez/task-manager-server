@@ -1,7 +1,7 @@
 name: NestJS Backend
 
 on:
-  push:
+  pull_request:
     branches: [main]
 
 jobs:
@@ -15,6 +15,3 @@ jobs:
       - run: npm ci
       - run: npm run test
       - run: npm run build
-      
-
-
