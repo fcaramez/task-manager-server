@@ -24,6 +24,7 @@ import { Logger } from '@nestjs/common';
 @UseGuards(AuthGuard())
 export class TasksController {
   constructor(private tasksService: TasksService) {}
+
   private logger = new Logger('TasksController');
 
   @Get()
