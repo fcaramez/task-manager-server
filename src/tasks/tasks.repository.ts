@@ -7,7 +7,7 @@ import {
   NotFoundException,
 } from '@nestjs/common/exceptions';
 import { GetTasksFilterDto } from './dto/get-tasks-filter.dto.filter';
-import { User } from 'src/auth/user.entity';
+import { User } from '../auth/user.entity';
 import { Logger } from '@nestjs/common';
 
 @EntityRepository(Task)
